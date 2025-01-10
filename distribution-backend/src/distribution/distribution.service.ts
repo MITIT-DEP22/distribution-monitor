@@ -41,11 +41,11 @@ export class DistributionService {
       where.position = {
         id: searchedId,
       };
-    } else if (searchBy === 'militaryBase') {
+    } else if (searchBy === 'military-base') {
       where.militaryBase = {
         id: searchedId,
       };
-    } else if (searchBy === 'releaseYear') {
+    } else if (searchBy === 'year') {
       where.releaseYear = {
         id: searchedId,
       };

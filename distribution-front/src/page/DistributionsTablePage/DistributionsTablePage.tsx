@@ -1,19 +1,20 @@
 import React from 'react';
 import css from "./DistributionsTablePage.module.css"
-import {observer} from "mobx-react-lite";
 import DistributionTable from "../../widget/DistributionTable/DistributionTable";
 import Title from "../../shared/ui/Title/Title";
+import DistributionTableDetails
+    from "../../widget/DistributionTable/ui/DistributionTableDetails/DistributionTableDetails";
 
-const DistributionsTablePage = observer(() => {
+const DistributionsTablePage = () => {
 
-    // const {id}
 
     return (
         <div className={css.container}>
-            <Title value={"General distributions table"}/>
+            <Title value={"Таблиця розподілу"}/>
+            <DistributionTableDetails/>
             <DistributionTable/>
         </div>
     );
-});
+};
 
 export default DistributionsTablePage;

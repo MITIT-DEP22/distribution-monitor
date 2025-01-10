@@ -14,10 +14,10 @@ const Header = () => {
             </div>
 
             <div className={css.linksContainer}>
-                <CustomLink to={RouterNames.DISTRIBUTIONS} text={"Distributions"}>
+                <CustomLink to={RouterNames.DISTRIBUTIONS} text={"Випуск"}>
                     <i className="bi bi-mortarboard"></i>
                 </CustomLink>
-                <CustomLink to={RouterNames.ADMIN} text={"Manage"}>
+                <CustomLink to={RouterNames.ADMIN} text={"Керування"}>
                     <i className="bi bi-tools"></i>
                 </CustomLink>
             </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import DistributionTableRow from "./ui/DistributionTableRow/DistributionTableRow";
 import css from "./DistributionTable.module.css"
 import distributionStore from "../../entity/distribution/store/DistributionStore";
@@ -17,6 +17,7 @@ const DistributionTable = observer(() => {
         distributionStore.getDistributions(pageNumber)
     }, [pageNumber]);
 
+
     const fetchMoreData = () => {
         setPageNumber(pageNumber + 1);
     };
@@ -31,20 +32,20 @@ const DistributionTable = observer(() => {
                 </div>
                 <div onClick={() => {
                     distributionStore.sortByName()
-                }}>Full Name
+                }}>П.І.Б.
                 </div>
                 <div onClick={() => {
                     distributionStore.sortByPosition()
-                }}>Position
+                }}>Посада
                 </div>
                 <div onClick={() => {
                     distributionStore.sortByVoc()
-                }}>VOC
+                }}>ВОС
                 </div>
                 <div onClick={() => {
                     distributionStore.sortByReleaseYear(sortDirections)
                     setSortDirection(!sortDirections)
-                }}>Release Year
+                }}>Рік випуску
                 </div>
             </div>
             <InfiniteScroll

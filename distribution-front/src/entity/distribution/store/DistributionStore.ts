@@ -8,10 +8,22 @@ class DistributionStore {
     @observable count: number = 0;
     @observable isLoading: boolean = true;
     @observable hasMore: boolean = true;
+    @observable searchParams: { id: number, type: string } = {id: 0, type: ""}
 
     constructor() {
         makeAutoObservable(this)
-        this.getDistributions(1)
+    }
+
+    @action
+    setSearchParams(searchParams: { id: number; type: string }) {
+        this.searchParams = searchParams;
+        this.setDistributions([])
+        this.hasMore = true;
+    }
+
+    @action
+    setDistributions(distributions: Distribution[]) {
+        this.distributions = distributions;
     }
 
     @action
@@ -28,10 +40,13 @@ class DistributionStore {
 
     @action
     getDistributions(page: number) {
+        console.log(this.searchParams.type)
         $api.get("/distributions", {
             params: {
                 page: page,
-                limit: 10
+                limit: 10,
+                by: this.searchParams.type,
+                id: this.searchParams.id
             }
         }).then(res => {
             if (res.data.items.length === 0) {
