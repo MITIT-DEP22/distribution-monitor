@@ -16,7 +16,7 @@ import regionStore from "../../entity/region/store/regionStore";
 
 const DistributionBlock = observer(() => {
 
-    const {distributions, isLoading: distributionIsLoading} = distributionStore
+    const {distributions,count, isLoading: distributionIsLoading} = distributionStore
     const {releaseYears, isLoading: releaseYearsIsLoading} = releaseYearStore
     const {militaryBases, isLoading: militaryBasesIsLoading} = militaryBaseStore
     const {topPositions, isLoading: positionsIsLoading} = positionStore
@@ -24,6 +24,7 @@ const DistributionBlock = observer(() => {
 
     useEffect(() => {
         positionStore.getTopPositions()
+        distributionStore.getCountDistributions()
     }, []);
 
     return (
@@ -35,7 +36,7 @@ const DistributionBlock = observer(() => {
                         <SubTitle value={"Graduates"}/>
                         <div className={css.graduatesContainer}>
                             <div className={css.textContent}>
-                                Count graduates in base: {distributions.length}
+                                Count graduates in base: {count}
                             </div>
                             <CustomLink to={RouterNames.DISTRIBUTIONS_TABLE} text={"Show table"}/>
 

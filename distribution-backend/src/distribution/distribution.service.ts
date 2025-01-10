@@ -49,9 +49,10 @@ export class DistributionService {
       where.releaseYear = {
         id: searchedId,
       };
-    } else {
-      throw new BadRequestException('Не коректний параметр пошуку');
     }
+    // else {
+    //   throw new BadRequestException('Не коректний параметр пошуку');
+    // }
 
     console.log(where);
 

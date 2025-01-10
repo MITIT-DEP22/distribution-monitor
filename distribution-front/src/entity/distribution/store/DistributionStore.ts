@@ -5,12 +5,25 @@ import $api from "../../../shared/api";
 
 class DistributionStore {
     @observable distributions: Distribution[] = [];
+    @observable count: number = 0;
     @observable isLoading: boolean = true;
     @observable hasMore: boolean = true;
 
     constructor() {
         makeAutoObservable(this)
         this.getDistributions(1)
+    }
+
+    @action
+    async getCountDistributions() {
+        this.isLoading = true;
+        try {
+            const response = await $api.get("/distributions/count")
+            this.count = response.data;
+            this.isLoading = false
+        } catch (e) {
+            console.log(e)
+        }
     }
 
     @action
@@ -29,6 +42,7 @@ class DistributionStore {
             this.isLoading = false
         }).catch(e => {
             console.log(e)
+            this.isLoading = false
         })
     }
 

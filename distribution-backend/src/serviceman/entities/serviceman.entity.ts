@@ -8,7 +8,7 @@ import {
 import { MilitaryRank } from '../../military-rank/entities/military-rank.entity';
 import { ApiProperty } from '@nestjs/swagger';
 
-@Entity()
+@Entity('service_man')
 export class Serviceman {
   @ApiProperty()
   @PrimaryGeneratedColumn()

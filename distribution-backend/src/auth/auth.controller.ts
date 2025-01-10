@@ -16,12 +16,12 @@ export class AuthController {
     return this.authService.login(userCredentialDto);
   }
 
-  // @ApiOperation({})
-  // @ApiResponse({})
-  // @Post('registration')
-  // registration(@Body() userCredentialDto: UserCredentialDto) {
-  //   return this.authService.registration(userCredentialDto);
-  // }
+  @ApiOperation({})
+  @ApiResponse({})
+  @Post('registration')
+  registration(@Body() userCredentialDto: UserCredentialDto) {
+    return this.authService.registration(userCredentialDto);
+  }
 
   @ApiOperation({})
   @ApiResponse({})
