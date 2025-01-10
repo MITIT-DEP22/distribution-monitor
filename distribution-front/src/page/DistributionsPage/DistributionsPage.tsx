@@ -5,7 +5,7 @@ import Title from "../../shared/ui/Title/Title";
 const DistributionsPage = () => {
     return (
         <>
-            <Title value={"General distributions page"}/>
+            <Title value={"Загальна сторінка розподілу"}/>
             <DistributionBlock/>
         </>
     );
