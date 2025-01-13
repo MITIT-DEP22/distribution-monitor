@@ -12,10 +12,18 @@ body {
     font-weight: 400;
 }
 
-.routingContainer{
-    margin: 10px;
+.stepCustomStyle::before {
+    content: '';
+    background-color: #F0F0F0; /* Background color for ::before */
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 0;
 }
 
+.routingContainer {
+    min-height: 78vh;
+}
 
 
 @font-face {

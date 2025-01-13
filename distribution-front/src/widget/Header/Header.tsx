@@ -20,6 +20,9 @@ const Header = () => {
                 <CustomLink to={RouterNames.ADMIN} text={"Керування"}>
                     <i className="bi bi-tools"></i>
                 </CustomLink>
+                <CustomLink to={RouterNames.TODO} text={"TODO"}>
+                    <i className="bi bi-tools"></i>
+                </CustomLink>
             </div>
         </div>
     );

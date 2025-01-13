@@ -5,8 +5,8 @@ import MainPage from "./MainPage/MainPage";
 import DistributionsPage from "./DistributionsPage/DistributionsPage";
 import DistributionsTablePage from "./DistributionsTablePage/DistributionsTablePage";
 import DistributionsDiagramsPage from "./DistributionsDiagramsPage/DistributionsDiagramsPage";
-import AddGraduatePage from "./AddGraduatePage/AddGraduatePage";
 import ManagePage from "./ManagePage/ManagePage";
+import ToDoPage from "./ToDoPage/ToDoPage";
 
 const Routing = () => {
     return (
@@ -15,8 +15,8 @@ const Routing = () => {
             <Route path={RouterNames.DISTRIBUTIONS} element={<DistributionsPage/>}/>
             <Route path={RouterNames.DISTRIBUTIONS_TABLE} element={<DistributionsTablePage/>}/>
             <Route path={RouterNames.DISTRIBUTIONS_DIAGRAM} element={<DistributionsDiagramsPage/>}/>
+            <Route path={RouterNames.TODO} element={<ToDoPage/>}/>
             <Route path={RouterNames.ADMIN} element={<ManagePage/>}/>
-            <Route path={RouterNames.ADD_GRADUATE} element={<AddGraduatePage/>}/>
         </Routes>
     );
 };

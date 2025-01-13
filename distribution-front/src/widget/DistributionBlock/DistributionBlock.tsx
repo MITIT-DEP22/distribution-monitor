@@ -2,9 +2,7 @@ import React, {useEffect} from 'react';
 import css from "./DistributionBlock.module.css"
 import LayoutContainer from "../../shared/ui/LayoutContainer/LayoutContainer";
 import distributionStore from "../../entity/distribution/store/DistributionStore";
-import {HashLoader} from "react-spinners";
 import {observer} from "mobx-react-lite";
-import {Link} from "react-router-dom";
 import {RouterNames} from "../../shared/enum/RouterNames";
 import CustomLink from "../../feature/CustomLink/CustomLink";
 import LoadingSpinner from "../../feature/LoadingSpinner/LoadingSpinner";

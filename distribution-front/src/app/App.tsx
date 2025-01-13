@@ -9,8 +9,9 @@ function App() {
     return (
         <>
             <Header/>
-            <Routing/>
-
+            <div className={"routingContainer"}>
+                <Routing/>
+            </div>
             <Footer/>
         </>
     );

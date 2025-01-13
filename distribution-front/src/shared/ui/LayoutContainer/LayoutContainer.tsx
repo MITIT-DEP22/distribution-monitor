@@ -3,12 +3,12 @@ import css from "./LayoutContainer.module.css"
 
 interface LayoutProps {
     children: React.ReactNode
-    span?:number;
+    span?: number;
 }
 
-const LayoutContainer: FC<LayoutProps> = ({children, span}) => {
+const LayoutContainer: FC<LayoutProps> = ({children, span = 1}) => {
     return (
-        <div style={{gridColumn:`span ${span}`}} className={css.container}>
+        <div style={{gridColumn: `span ${span}`}} className={css.container}>
             {children}
         </div>
     );
