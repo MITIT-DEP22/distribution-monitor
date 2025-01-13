@@ -7,5 +7,6 @@ export enum RouterNames {
     DISTRIBUTIONS_TABLE_BY_POSITION = "/distributions/table/position",
     DISTRIBUTIONS_TABLE_BY_YEAR = "/distributions/table/year",
     DISTRIBUTIONS_DIAGRAM = "/distributions/diagram",
+    ADD_GRADUATE = "/graduate/add",
     ADMIN = "/admin"
 }

@@ -13,6 +13,7 @@ import releaseYearStore from "../../entity/release-year/store/releaseYearStore";
 import militaryBaseStore from "../../entity/military-base/store/MilitaryBaseStore";
 import positionStore from "../../entity/position/store/PositionStore";
 import regionStore from "../../entity/region/store/regionStore";
+import Container from '../../shared/ui/Container/Container';
 
 const DistributionBlock = observer(() => {
 
@@ -28,7 +29,7 @@ const DistributionBlock = observer(() => {
     }, []);
 
     return (
-        <div className={css.container}>
+        <Container>
             <LayoutContainer span={5}>
                 {distributionIsLoading ? <LoadingSpinner/> :
                     <>
@@ -110,9 +111,7 @@ const DistributionBlock = observer(() => {
                     </>
                 }
             </LayoutContainer>
-
-
-        </div>
+        </Container>
     );
 });
 
