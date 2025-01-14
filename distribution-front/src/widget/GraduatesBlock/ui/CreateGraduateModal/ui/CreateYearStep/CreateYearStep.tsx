@@ -1,10 +1,11 @@
 import React from 'react';
+import BasicStep from "../../../../../../feature/MultiStep/BasicStep";
 
 const CreateYearStep = () => {
     return (
-        <div>
+        <BasicStep title={"CreateYearStep"}>
             CreateYearStep
-        </div>
+        </BasicStep>
     );
 };
 

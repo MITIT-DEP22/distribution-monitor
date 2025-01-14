@@ -11,3 +11,11 @@ export type Rank = {
     id:number;
     militaryRank:string;
 }
+
+export type ServicemanCreateDto = {
+    fullName:string;
+    rank:Rank;
+    birthdayYear:number;
+    sex:string;
+    specialty:string;
+}

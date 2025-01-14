@@ -3,3 +3,8 @@ export type Position = {
     position:string;
     voc:string;
 }
+
+export type PositionCreateDto = {
+    position:string;
+    voc:string;
+}

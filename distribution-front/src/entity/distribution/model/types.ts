@@ -1,13 +1,20 @@
-import {Serviceman} from "../../serviceman/model/types";
-import {Position} from "../../position/model/types";
-import {MilitaryBase} from "../../military-base/model/types";
-import {ReleaseYear} from "../../release-year/model/types";
+import {Serviceman, ServicemanCreateDto} from "../../serviceman/model/types";
+import {Position, PositionCreateDto} from "../../position/model/types";
+import {MilitaryBase, MilitaryBaseCreateDto} from "../../military-base/model/types";
+import {ReleaseYear, ReleaseYearCreateDto} from "../../release-year/model/types";
 
 export type Distribution = {
-    id:number;
-    serviceMan:Serviceman;
-    position:Position;
-    releaseYear:ReleaseYear;
-    militaryBase:MilitaryBase;
+    id: number;
+    serviceMan: Serviceman;
+    position: Position;
+    releaseYear: ReleaseYear;
+    militaryBase: MilitaryBase;
+}
+
+export type DistributionCreateDto = {
+    serviceMan: ServicemanCreateDto;
+    position: PositionCreateDto;
+    releaseYear: ReleaseYearCreateDto;
+    militaryBase: MilitaryBaseCreateDto;
 }
 

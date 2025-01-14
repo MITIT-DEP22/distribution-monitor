@@ -6,9 +6,9 @@ interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
     height?:number|string;
 }
 
-const Button: FC<ButtonProps> = ({onClick, children, width,height}) => {
+const Button: FC<ButtonProps> = ({onClick, children, width,height, style}) => {
     return (
-        <button style={{height:height, width:width}} onClick={onClick} className={css.btn}>
+        <button style={{...style,height:height, width:width}} onClick={onClick} className={css.btn}>
             {children}
         </button>
     );

@@ -1,10 +1,11 @@
 import React from 'react';
+import BasicStep from "../../../../../../feature/MultiStep/BasicStep";
 
 const CreateMilitaryBaseAndRegionStep = () => {
     return (
-        <div>
+        <BasicStep title={"CreateMilitaryBaseAndRegionStep"}>
             CreateMilitaryBaseAndRegionStep
-        </div>
+        </BasicStep>
     );
 };
 
