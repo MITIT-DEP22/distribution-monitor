@@ -14,7 +14,7 @@ export type Rank = {
 
 export type ServicemanCreateDto = {
     fullName:string;
-    rank:Rank;
+    rankId:number;
     birthdayYear:number;
     sex:string;
     specialty:string;

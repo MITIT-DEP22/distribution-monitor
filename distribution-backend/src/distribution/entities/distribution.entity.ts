@@ -14,7 +14,7 @@ export class Distribution {
   @ApiProperty()
   @OneToOne(() => Serviceman)
   @JoinColumn()
-  serviceMan: Serviceman;
+  serviceman: Serviceman;
 
   @ApiProperty()
   @OneToOne(() => Position)

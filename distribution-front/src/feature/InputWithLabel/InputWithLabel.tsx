@@ -16,12 +16,14 @@ const InputWithLabel: FC<InputWithLabelProps> = ({
                                                      defaultValue,
                                                      disabled,
                                                      width,
-                                                     height
+                                                     height,
+                                                     name,
+                                                     defaultChecked
                                                  }) => {
     return (
         <div style={style} className={`${css.container} ${className}`}>
             <span style={style} className={css.label}>{label}</span>
-            <input disabled={disabled} defaultValue={defaultValue} style={{...style, width, height}}
+            <input defaultChecked={defaultChecked} name={name} disabled={disabled} defaultValue={defaultValue} style={{...style, width, height}}
                    className={css.input}
                    onChange={onChange} type={type}/>
         </div>

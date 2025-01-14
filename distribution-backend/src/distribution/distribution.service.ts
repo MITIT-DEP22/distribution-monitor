@@ -59,7 +59,7 @@ export class DistributionService {
     return paginate<Distribution>(this.distributionRepository, options, {
       where: where,
       relations: {
-        serviceMan: true,
+        serviceman: true,
         position: true,
         releaseYear: true,
         militaryBase: {
@@ -72,7 +72,7 @@ export class DistributionService {
   findAll() {
     return this.distributionRepository.find({
       relations: {
-        serviceMan: true,
+        serviceman: true,
         position: true,
         releaseYear: true,
         militaryBase: {
@@ -91,7 +91,7 @@ export class DistributionService {
       return await this.distributionRepository.findOneOrFail({
         where: { id: id },
         relations: {
-          serviceMan: true,
+          serviceman: true,
           position: true,
           releaseYear: true,
           militaryBase: true,

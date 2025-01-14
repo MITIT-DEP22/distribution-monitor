@@ -109,10 +109,10 @@ class DistributionStore {
     sortByName() {
         const sorted = [...this.distributions];
         sorted.sort((x1, x2) => {
-            if (x1.serviceMan.fullName.localeCompare(x2.serviceMan.fullName)) {
+            if (x1.serviceman.fullName.localeCompare(x2.serviceman.fullName)) {
                 return -1;
             }
-            if (x2.serviceMan.fullName.localeCompare(x1.serviceMan.fullName)) {
+            if (x2.serviceman.fullName.localeCompare(x1.serviceman.fullName)) {
                 return 1;
             }
             return 0;

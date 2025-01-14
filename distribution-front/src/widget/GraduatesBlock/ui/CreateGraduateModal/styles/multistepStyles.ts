@@ -17,13 +17,15 @@ const topNav = {
     marginTop: "24px",
     marginBottom: "24px",
     justifyContent: "space-between",
-    listStyleType: "none"
+    listStyleType: "none",
+    fontSize:"18px",
+    fontWeight: 800
 }
 const topNavStep = {
     color: gray,
     cursor: 'pointer',
     width: "100%",
-    borderBottom: '2px solid silver',
+    borderBottom: `3px solid ${gray}`,
     display: 'flex',
     justifyContent: "center",
 }
@@ -34,7 +36,7 @@ const topNavStepPassed = {
     display: 'flex',
     justifyContent: "center",
     width: "100%",
-    borderBottom: `2px solid ${black} `,
+    borderBottom: `3px solid ${black} `,
 }
 
 const container = {

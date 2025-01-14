@@ -5,7 +5,7 @@ import {ReleaseYear, ReleaseYearCreateDto} from "../../release-year/model/types"
 
 export type Distribution = {
     id: number;
-    serviceMan: Serviceman;
+    serviceman: Serviceman;
     position: Position;
     releaseYear: ReleaseYear;
     militaryBase: MilitaryBase;
