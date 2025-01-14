@@ -1,4 +1,4 @@
-import {makeObservable} from "mobx";
+import {makeAutoObservable, makeObservable} from "mobx";
 import {DistributionCreateDto} from "../model/types";
 
 class DistributionCreateStore {
@@ -6,7 +6,7 @@ class DistributionCreateStore {
     newDistribution: DistributionCreateDto = {} as DistributionCreateDto;
 
     constructor() {
-        makeObservable(this)
+        makeAutoObservable(this)
     }
 
 
